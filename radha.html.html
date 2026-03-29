@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaid Gamer | Official</title>
+
+<style>
+/* ------------------ Body & Background ------------------ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Background Image */
+    background: url('bg.jpg.jpg') no-repeat center top/cover; /* top to show face */
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+    padding-top: 250px; /* moves content down to reveal face */
+    height: 100vh;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35); /* lighter overlay so face is visible */
+    z-index: -1;
+}
+
+/* Light Mode */
+body.light {
+    background: #f4f4f4;
+    color: black;
+}
+
+/* ------------------ Header & Logo ------------------ */
+header {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #00ffd5;
+    text-shadow: 0 0 10px #00ffd5;
+}
+
+/* 3D Logo */
+.logo {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    background: url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png') no-repeat center/cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transform: perspective(500px) rotateY(20deg);
+    transition: 0.5s;
+}
+.logo:hover {
+    transform: rotateY(0deg) scale(1.1);
+}
+
+/* ------------------ Hero Text ------------------ */
+.hero {
+    position: absolute;
+    top: 15%; /* lower to show face */
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #00ffd5;
+    text-shadow: 0 0 20px #00ffd5, 0 0 40px #00ffd5;
+}
+
+/* ------------------ Intro Box (Card) ------------------ */
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 500px;
+    border-radius: 20px;
+
+    border: 2px solid #00ffd5;
+    box-shadow: 0 0 20px #00ffd5, 0 0 40px rgba(0,255,213,0.5);
+
+    transform: perspective(800px) rotateX(5deg);
+    transition: 0.5s;
+}
+.card:hover {
+    transform: perspective(800px) rotateX(0deg) scale(1.05);
+    box-shadow: 0 0 30px #00ffd5, 0 0 60px rgba(0,255,213,0.8);
+}
+
+/* Card Headings */
+h2 {
+    color: #00ffd5;
+    text-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px red;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Toggle Dark/Light Mode */
+.toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+/* YouTube Video */
+iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 15px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌗 Mode</div>
+
+<header>🎮 ZAID GAMER</header>
+
+<div class="logo"></div>
+
+<h1 class="hero">ZAID GAMER</h1>
+
+<!-- Channel Introduction -->
+<div class="card">
+    <h2>🔥 Channel Introduction</h2>
+    <p>
+        🎮 Welcome to <b>Zaid Gamer</b>! <br><br>
+        ⚡ Daily gaming videos <br>
+        🔥 Pro tips & tricks <br>
+        🎥 Live streams & fun challenges <br><br>
+        🚀 Join the gaming squad now!
+    </p>
+    <a href="https://www.youtube.com/" target="_blank" class="btn">🔴 Subscribe Now</a>
+</div>
+
+<!-- Latest Video -->
+<div class="card">
+    <h2>🎥 Latest Video</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+<!-- Bio Data -->
+<div class="card">
+    <h2>👤 Bio Data</h2>
+    <p><strong>Name:</strong> Zaid</p>
+    <p><strong>Channel:</strong> Zaid Gamer</p>
+    <p><strong>Content:</strong> Gaming, Live Streams</p>
+    <p><strong>Country:</strong> India</p>
+    <p><strong>Experience:</strong> Beginner Gamer</p>
+</div>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-dubstep.mp3" type="audio/mp3">
+</audio>
+
+<footer>
+    © 2026 Zaid Gamer
+</footer>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
