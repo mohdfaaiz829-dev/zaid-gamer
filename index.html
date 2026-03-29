@@ -10,13 +10,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    /* Background Image */
-    background: url('bg.jpg') no-repeat center top/cover; /* top to show face */
+    background: url('bg.jpg') no-repeat center top/cover;
     color: white;
     text-align: center;
     transition: 0.5s;
-    padding-top: 250px; /* moves content down to reveal face */
+    padding-top: 250px;
     height: 100vh;
 }
 
@@ -28,7 +26,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.35); /* lighter overlay so face is visible */
+    background: rgba(0,0,0,0.35);
     z-index: -1;
 }
 
@@ -65,7 +63,7 @@ header {
 /* ------------------ Hero Text ------------------ */
 .hero {
     position: absolute;
-    top: 15%; /* lower to show face */
+    top: 15%;
     width: 100%;
     font-size: 50px;
     font-weight: bold;
@@ -80,10 +78,8 @@ header {
     padding: 25px;
     max-width: 500px;
     border-radius: 20px;
-
     border: 2px solid #00ffd5;
     box-shadow: 0 0 20px #00ffd5, 0 0 40px rgba(0,255,213,0.5);
-
     transform: perspective(800px) rotateX(5deg);
     transition: 0.5s;
 }
@@ -167,7 +163,9 @@ footer {
 <!-- Latest Video -->
 <div class="card">
     <h2>🎥 Latest Video</h2>
-    <iframe src="https://www.youtube.com/watch?v=2GhQzuocpPM"></iframe>
+    <iframe src="https://www.youtube.com/embed/2GhQzuocpPM" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
 </div>
 
 <!-- Bio Data -->
